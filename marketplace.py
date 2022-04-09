@@ -13,6 +13,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 from threading import Lock
+import time
 
 from .product import Product
 
@@ -27,6 +28,8 @@ def logger_set_up():
         level=logging.DEBUG,
         format="[%(asctime)s] %(levelname)s [%(name)s.%(funcName)s:%(lineno)d] %(message)s",
         datefmt='%Y-%m-%dT%H:%M:%S')
+
+    logging.Formatter.converter = time.gmtime
 
 
 class Marketplace:

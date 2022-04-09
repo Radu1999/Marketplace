@@ -29,6 +29,8 @@ Grupă: 335CA
 
 - Resurse utilizate - toate resursele publice de pe internet/cărți/code snippets, chiar dacă sunt laboratoare de ASC
 
+- https://stackoverflow.com/questions/40088496/how-to-use-pythons-rotatingfilehandler
+
 ## Git
 
 1. Link către repo-ul de git
