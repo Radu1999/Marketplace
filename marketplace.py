@@ -126,12 +126,12 @@ class Marketplace:
         logging.info(
             'add_to_cart started. Parameters: cart_id=%i, product=%s.', cart_id, product)
 
-        # check if product is available
-        if product not in self.available_products or self.available_products[product] == 0:
-            logging.info('add_to_cart finished. Returned False.')
-            return False
-
         with self.customer_lock:
+
+            # check if product is available
+            if product not in self.available_products or self.available_products[product] == 0:
+                logging.info('add_to_cart finished. Returned False.')
+                return False
 
             # decrement availability
             self.available_products[product] -= 1
