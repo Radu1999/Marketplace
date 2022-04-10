@@ -14,7 +14,6 @@ class Consumer(Thread):
     """
     Class that represents a consumer.
     """
-    printing_lock = Lock()
 
     def __init__(self, carts, marketplace, retry_wait_time, **kwargs):
         """
@@ -55,5 +54,5 @@ class Consumer(Thread):
 
             products = self.marketplace.place_order(cart_id)
             for prod in products:
-                with Consumer.printing_lock:
+                with self.marketplace.printing_lock:
                     print(f'{self.name} bought {prod}')

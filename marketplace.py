@@ -53,6 +53,7 @@ class Marketplace:
         self.carts: dict[int, list] = {}
         self.customer_lock = Lock()
         self.producer_lock = Lock()
+        self.printing_lock = Lock()
 
     def register_producer(self):
         """
