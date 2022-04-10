@@ -7,7 +7,7 @@ March 2021
 """
 
 from time import sleep
-from threading import Thread, Lock
+from threading import Thread
 
 
 class Consumer(Thread):
