@@ -7,8 +7,6 @@ Grupă: 335CA
 
 1. Solutia aleasa foloseste dictionare unde key-urile sunt id uri si values sunt liste.
 
-**_Obligatoriu:_**
-
 - Am implementat enuntul temei folosindu-ma de dictionare care retin pentru un id de producator toate produsele generate de acesta.
 
 - Tema este utila intrucat impinge catre analizarea situatiilor ce pot genera racing conditions si deadlock.
@@ -20,7 +18,7 @@ Grupă: 335CA
 - Intregul enunt al temei este implementat.
 - Print este o functie care nu este thread-safe, asa ca am protejat-o cu un lock din obiectul de marketplace al consumatorului. Initial lock-ul era static, in clasa consumator, dar din precizarile temei
   acest lucru nu este permis.
-- Lucruri interesante descoperite pe parcurs
+- Lucruri interesante descoperite pe parcurs: print nu este thread-safe, lucrul cu modulul de logging si unit testing in python.
 
 ## Resurse utilizate
 
